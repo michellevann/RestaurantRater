@@ -24,7 +24,7 @@ namespace RestaurantRater_MVC.Controllers
         //POST: Restaurant/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create ([Bind(Include = "RestaurantID,Name")] Restaurant restaurant)
+        public ActionResult Create ([Bind(Include = "RestaurantID,Name,Address,Description,Rating")] Restaurant restaurant)
         {
             if (ModelState.IsValid)
             {
